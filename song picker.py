@@ -4,6 +4,7 @@
 
 import numpy as np
 import soundfile as sf
+import sys
 
 class songData:
 	"""
@@ -31,6 +32,35 @@ def importSong(songFile):
 	newSong = songData(data, samplerate, songFile)
 
 	return newSong
+
+def findBPM (song):
+	"""
+	TODO
+	FFT the audio data to get the BPM
+	"""
+	return 0
+
+def main():
+
+	songList = []
+
+	newDict = {}
+
+	member = None
+
+	for song in songList:
+		member = importSong(song)
+
+		newDict[self.findBPM(member)] = member
+
+	print newDict
+
+
+# 	options = sys.argv
+
+# if __name__ == '__main__':
+# 	main()
+
 
 
 
